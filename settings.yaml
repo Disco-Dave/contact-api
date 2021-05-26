@@ -1,0 +1,19 @@
+http:
+  host: localhost
+  port: 8081
+
+email:
+  smtp_host: localhost
+  smtp_port: 1025
+  mailhog_host: localhost
+  mailhog_port: 8025
+  from: noreply@contact-api.fake
+  backup_dir: ./emails
+  recipients:
+    - bob@fake.fake
+    - beth@fake.fake
+    - george@other.fake
+
+log:
+  directive: trace
+  log_dir: ./logs

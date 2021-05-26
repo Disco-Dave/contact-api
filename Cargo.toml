@@ -1,0 +1,45 @@
+[package]
+name = "contact-api"
+version = "0.1.0"
+authors = ["David Burkett <david@davidburkett.xyz>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-files = "0.6.0-beta.4"
+actix-http = "=3.0.0-beta.5"
+actix-rt = "2.2.0"
+actix-service = "=2.0.0-beta.5"
+actix-web = "=4.0.0-beta.5"
+config = "0.11.0"
+lettre = { version = "0.10.0-rc.1", features = [
+  "smtp-transport",
+  "builder",
+  "hostname",
+  "r2d2",
+  "tokio1",
+  "tokio1-rustls-tls",
+  "file-transport",
+  "tracing",
+] }
+serde = { version = "1.0.126", features = ["derive"] }
+tracing = { version = "0.1", features = ["log"] }
+tracing-actix-web = "0.4.0-beta.1"
+tracing-appender = "0.1"
+tracing-futures = "0.2.5"
+tracing-log = "0.1.2"
+tracing-subscriber = { version = "0.2.18", features = [
+  "registry",
+  "env-filter",
+  "json",
+  "ansi",
+  "fmt",
+] }
+unicode-segmentation = "1.7.1"
+
+[dev-dependencies]
+actix-rt = "2.2.0"
+reqwest = { version = "0.11.3", features = ["json"] }
+tokio = "1.6.0"
+uuid = "0.8.2"
